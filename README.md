@@ -22,23 +22,27 @@ pip install volttron
  1. Setup VOLTTRON_HOME environment variable: export VOLTTRON_HOME=/path/to/volttron_home/dir 
  
     **NOTE** This is madatory if you have/had in the past, a monolithic    VOLTTRON version that used the default VOLTTRON_HOME $HOME/.volttron. This modular version of VOLTTRON cannot work with volttron_home used by monolithic version of VOLTTRON(version 8.3 or earlier)
- 
- 2. Start the platform
+    Please define a config file in VOLTTRON_HOME dir consisting of the following:
+"[volttron]
+instance-name = volttron1
+message-bus = zmq"
+
+ 3. Start the platform
     ```bash
     volttron -vv -l volttron.log &>/dev/null &
     ```
 
- 3. Install listener agent
+ 4. Install listener agent
     ```bash
     vctl install volttron-listener --start
     ```
 
- 4. View status of platform
+ 5. View status of platform
     ```bash
     vctl status
     ```
 
- 5. Shutdown the platform
+ 6. Shutdown the platform
     ```bash
     vctl shutdown --platform
     ```
