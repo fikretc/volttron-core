@@ -23,9 +23,13 @@ pip install volttron
  
     **NOTE** This is madatory if you have/had in the past, a monolithic    VOLTTRON version that used the default VOLTTRON_HOME $HOME/.volttron. This modular version of VOLTTRON cannot work with volttron_home used by monolithic version of VOLTTRON(version 8.3 or earlier)
     Please define a config file in VOLTTRON_HOME dir consisting of the following:
-"[volttron]
-instance-name = volttron1
-message-bus = zmq"
+
+    ```  
+    [volttron]  
+    instance-name = volttron1  
+    message-bus = zmq
+    ```
+
 
  3. Start the platform
     ```bash
